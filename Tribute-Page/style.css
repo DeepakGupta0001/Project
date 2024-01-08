@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@1,300;1,600&display=swap");
+
+:root {
+  --title-fonts: "Libre Baskerville", serif;
+  --red-hat-font: "Red Hat Display", sans-serif;
+  --white: rgba(236, 236, 236, 0.877);
+  --background-color: #000000;
+  --purple: rgb(97, 33, 122);
+  --yellow-hover: #fae475;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+  overflow-y: scroll;
+  min-height: 100vh;
+  background-color: var(--background-color);
+}
+
+body::-webkit-scrollbar {
+  display: none; 
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+}
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  width: 100%;
+  text-transform: uppercase;
+  list-style: none;
+  gap: 2rem;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+.navigation li {
+  padding: 2rem;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+.navigation a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.ham-icon {
+  display: none;
+}
+
+.header {
+  background-color: #837960;
+  background-image: linear-gradient(to bottom, transparent, #000000),
+    url("anne1.png");
+  background-position: center center;
+  background-size: cover;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  min-height: 60rem;
+  margin-top: 5rem;
+}
+
+
+.about-section {
+  width: 80%;
+  margin: 0 auto;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  gap: 5rem;
+  color: var(--white);
+  margin-top: 8rem;
+}
+.highlight {
+  display: block;
+  color: var(--yellow-hover);
+}
+
+.about-pic {
+  background-image: url("anne2.png");
+  background-position: center center;
+  background-size: cover;
+  width: 40%;
+  max-width: 40rem;
+  min-width: 20rem;
+  height: 50%;
+  max-height: 55rem;
+  min-height: 30rem;
+  border-radius: 50%;
+}
+.about-content h3 {
+  font-size: 3rem;
+  font-family: var(--title-fonts);
+  line-height: 5rem;
+}
+.about-content p {
+  font-size: 2rem;
+  text-align: left;
+}
+
+.tribute-info {
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  color: var(--white);
+}
+
+.blockquote {
+  width: 60%;
+  margin: 0 auto;
+  font-family: var(--red-hat-font);
+  color: var(--white);
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.blockquote cite {
+  color: var(--yellow-hover);
+}
+
+
+.resources {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 90%;
+  margin: 0 auto;
+  font-family: var(--red-hat-font);
+  color: var(--white);
+  font-size: 1.5rem;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 4rem;
+}
+
+/** Hover **/
+@media (hover: hover) {
+  .navigation a:hover{
+    cursor: pointer;
+    color: var(--yellow-hover);
+    transition: color ease-in 0.3s;
+  }
+}
+
